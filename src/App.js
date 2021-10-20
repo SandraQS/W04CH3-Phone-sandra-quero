@@ -6,7 +6,7 @@ import TelefonoContext from "./context/TelefonoContext";
 
 function App() {
   const [numerosPantalla /*setNumerosPantalla*/] = useState([]);
-  const [llamada, setLlamada] = useState(false);
+  const [llamada /*setLlamada*/] = useState(false);
 
   return (
     <div className="container">
