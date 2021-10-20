@@ -1,15 +1,18 @@
 import { useState } from "react";
 import "./App.css";
 import Display from "./componentes/Display";
+import Info from "./componentes/Info/Info";
 import TelefonoContext from "./context/TelefonoContext";
 
 function App() {
   const [numerosPantalla /*setNumerosPantalla*/] = useState([]);
+  const [llamada /*setLlamada*/] = useState(false);
 
   return (
     <div className="container">
-      <TelefonoContext.Provider value={{ numerosPantalla }}>
+      <TelefonoContext.Provider value={{ numerosPantalla, llamada }}>
         <Display numerosPantalla={numerosPantalla} />
+        {llamada ? <Info mensajeLlamando={"Calling..."} /> : ""}
       </TelefonoContext.Provider>
       {/* <!-- El siguiente elemento se oculta añadiéndole la clase "off" --> */}
       {/* <span class="message">Calling...</span>
