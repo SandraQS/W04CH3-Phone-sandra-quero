@@ -13,10 +13,9 @@
   .Estado inicial todo.
 
 - Info:
-  .Renderiza el mensaje recibido.
   .Lo muestra segun una condicion recibida.
 
-- Display:
+- Display: --XXXXX---
   .Renderiza cada numero recibido
 
 - Actions:
