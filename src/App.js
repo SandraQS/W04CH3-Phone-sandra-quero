@@ -4,7 +4,7 @@ import Display from "./componentes/Display";
 import TelefonoContext from "./context/TelefonoContext";
 
 function App() {
-  const [numerosPantalla, setNumerosPantalla] = useState([]);
+  const [numerosPantalla /*setNumerosPantalla*/] = useState([]);
 
   return (
     <div className="container">
