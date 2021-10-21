@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import "./Info.css";
 
-const Info = ({ mensajeLlamando }) => {
-  return <span className="message">{mensajeLlamando}</span>;
+const Info = ({ className }) => {
+  const mensaje = "Calling...";
+  return <span className={`message ${className}`}>{mensaje}</span>;
 };
 
 Info.prototype = {

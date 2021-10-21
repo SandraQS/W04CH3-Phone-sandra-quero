@@ -24,7 +24,7 @@
   .Pasa una classe al action.
   .Pasa una funcion a action.
 
-  - Action:
+  - Action: ---
     .Renderiza texto recibido.
     .Recibe asigna classes.
     .Recibe una función.
@@ -33,9 +33,9 @@
 - Keyboard:
   .Muestra Key. -X-
   .Pasa texto a key. -X-
-  .Pasa function a key según condicion.
-  .Recibe un estado que activa o desactivan botones.
 
   - Key: ---XXXX----
+    .Recibe una clase -X-
     .Renderiza un botton con texto recibido. -X-
-    .Recibe una funcion que se ejecuta cunado se hace onClick.
+    .Ejecuta una funcion onClick. -X-
+    .Recibe un estado que activa o desactivan botones. -X-

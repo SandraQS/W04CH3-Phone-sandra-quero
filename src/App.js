@@ -4,11 +4,12 @@ import Display from "./componentes/Display";
 import Info from "./componentes/Info/Info";
 import TelefonoContext from "./context/TelefonoContext";
 import Prueba from "./componentes/Keyboard/Keyboard";
-// import Actions from "./componentes/Actions/Actions";
+import Actions from "./componentes/Actions/Actions";
 
 function App() {
   const [numerosPantalla, setNumerosPantalla] = useState([]);
-  const [enLlamada /*setenLlamada*/] = useState(false);
+  const [enLlamada, setEnLlamada] = useState(false);
+  const [nueveDigitos, setNueveDigitos] = useState(false);
   const botones = [
     { id: 1, texto: 1, estadoClick: false },
     { id: 2, texto: 2, estadoClick: false },
@@ -26,14 +27,24 @@ function App() {
   return (
     <div className="container">
       <TelefonoContext.Provider
-        value={{ numerosPantalla, setNumerosPantalla, enLlamada, botones }}
+        value={{
+          numerosPantalla,
+          setNumerosPantalla,
+          enLlamada,
+          setEnLlamada,
+          botones,
+          nueveDigitos,
+          setNueveDigitos,
+        }}
       >
         <Display numerosPantalla={numerosPantalla} />
-        {enLlamada ? <Info mensajeLlamando={"Calling..."} /> : ""}
+        <Info className={enLlamada ? "" : "off"} />
         <div className="keyboard-container">
           <Prueba botones={botones} />
         </div>
-        {/* <Actions enLlamada={enLlamada} /> */}
+        <div className="actions">
+          <Actions enLlamada={enLlamada} />
+        </div>
       </TelefonoContext.Provider>
       {/* <!-- El siguiente elemento se oculta añadiéndole la clase "off" --> */}
       {/* <span class="message">Calling...</span>
