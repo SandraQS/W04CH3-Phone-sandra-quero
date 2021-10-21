@@ -3,7 +3,7 @@ import "./App.css";
 import Display from "./componentes/Display";
 import Info from "./componentes/Info/Info";
 import TelefonoContext from "./context/TelefonoContext";
-import Prueba from "./componentes/Prueba/Prueba";
+import Prueba from "./componentes/Keyboard/Keyboard";
 
 function App() {
   const [numerosPantalla /*setNumerosPantalla*/] = useState([]);
