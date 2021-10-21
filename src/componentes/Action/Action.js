@@ -3,7 +3,7 @@ import TelefonoContext from "../../context/TelefonoContext";
 import "./Action.css";
 
 const Action = ({ textoBoton, className, onClick }) => {
-  const { nueveDigitos, setNumerosPantalla } = useContext(TelefonoContext);
+  const { nueveDigitos } = useContext(TelefonoContext);
 
   return (
     <a
