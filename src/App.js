@@ -38,7 +38,7 @@ function App() {
         }}
       >
         <Display numerosPantalla={numerosPantalla} />
-        {enLlamada ? <Info mensajeLlamando={"Calling..."} /> : ""}
+        <Info className={enLlamada ? "" : "off"} />
         <div className="keyboard-container">
           <Prueba botones={botones} />
         </div>
