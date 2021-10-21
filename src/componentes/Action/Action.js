@@ -12,7 +12,6 @@ const Action = ({ textoBoton, className, onClick }) => {
       onClick={(evento) => onClick(evento)}
     >
       {textoBoton}
-      {console.log(nueveDigitos)}
     </a>
   );
 };
