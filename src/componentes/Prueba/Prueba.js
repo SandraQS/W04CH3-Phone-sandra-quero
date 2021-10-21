@@ -16,5 +16,8 @@ const Prueba = () => {
     </>
   );
 };
+Prueba.prototype = {
+  botones: PropTypes.array.isRequired,
+};
 
 export default Prueba;
