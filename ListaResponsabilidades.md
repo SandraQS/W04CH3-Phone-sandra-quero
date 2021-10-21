@@ -12,8 +12,8 @@
   .Contador tiempo llamada.
   .Estado inicial todo.
 
-- Info:
-  .Lo muestra segun una condicion recibida.
+- Info: ---XXXXX-
+  .Renderiza una frase recibida según estado recibido
 
 - Display: --XXXXX---
   .Renderiza cada numero recibido
@@ -31,11 +31,11 @@
     .Recibe estado
 
 - Keyboard:
-  .Muestra Key.
-  .Pasa texto a key.
+  .Muestra Key. -X-
+  .Pasa texto a key. -X-
   .Pasa function a key según condicion.
   .Recibe un estado que activa o desactivan botones.
 
-  - Key:
-    .Renderiza un botton con texto recibido.
+  - Key: ---XXXX----
+    .Renderiza un botton con texto recibido. -X-
     .Recibe una funcion que se ejecuta cunado se hace onClick.

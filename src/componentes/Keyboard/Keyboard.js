@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 // import "./Keyboard.css";
 import Key from "../Key/Key";
 
-const Prueba = () => {
+const Keyboard = () => {
   const { botones } = useContext(TelefonoContext);
+
   return (
     <>
       <ol className="keyboard">
@@ -20,8 +21,8 @@ const Prueba = () => {
     </>
   );
 };
-Prueba.prototype = {
+Keyboard.prototype = {
   botones: PropTypes.array.isRequired,
 };
 
-export default Prueba;
+export default Keyboard;
