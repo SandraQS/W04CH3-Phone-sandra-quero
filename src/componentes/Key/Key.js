@@ -4,17 +4,19 @@ import TelefonoContext from "../../context/TelefonoContext";
 import "./Key.css";
 
 const Key = ({ contenidoBotones, className }) => {
-  const { numerosPantalla, setNumerosPantalla } = useContext(TelefonoContext);
-  ////////AQUI------->
+  const { numerosPantalla, setNumerosPantalla, setNueveDigitos } =
+    useContext(TelefonoContext);
+
   const marcarNumero = (evento) => {
     const botonClick = evento.target.textContent;
     if (numerosPantalla.length < 9) {
       setNumerosPantalla([...numerosPantalla, `${botonClick}`]);
-      // return numerosPantalla;
-      console.log(numerosPantalla);
+      setNueveDigitos(false);
+    }
+    if (numerosPantalla.length === 9) {
+      setNueveDigitos(true);
     }
   };
-  /////////<<---------
 
   return (
     <li>

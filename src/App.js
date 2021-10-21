@@ -8,7 +8,8 @@ import Actions from "./componentes/Actions/Actions";
 
 function App() {
   const [numerosPantalla, setNumerosPantalla] = useState([]);
-  const [enLlamada /*setenLlamada*/] = useState(false);
+  const [enLlamada, setEnLlamada] = useState(false);
+  const [nueveDigitos, setNueveDigitos] = useState(false);
   const botones = [
     { id: 1, texto: 1, estadoClick: false },
     { id: 2, texto: 2, estadoClick: false },
@@ -26,7 +27,15 @@ function App() {
   return (
     <div className="container">
       <TelefonoContext.Provider
-        value={{ numerosPantalla, setNumerosPantalla, enLlamada, botones }}
+        value={{
+          numerosPantalla,
+          setNumerosPantalla,
+          enLlamada,
+          setEnLlamada,
+          botones,
+          nueveDigitos,
+          setNueveDigitos,
+        }}
       >
         <Display numerosPantalla={numerosPantalla} />
         {enLlamada ? <Info mensajeLlamando={"Calling..."} /> : ""}

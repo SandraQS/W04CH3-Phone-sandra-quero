@@ -1,12 +1,18 @@
+import { useContext } from "react";
+import TelefonoContext from "../../context/TelefonoContext";
 import "./Action.css";
 
-const Action = ({ textoBoton, className }) => {
+const Action = ({ textoBoton, className, onClick }) => {
+  const { nueveDigitos } = useContext(TelefonoContext);
+
   return (
     <a
-      href="https://github.com/SandraQS/W04CH3-sandra-quero/pull/4"
-      className={className}
+      href="a"
+      className={`${className} ${nueveDigitos ? " active" : ""}`}
+      onClick={(evento) => onClick(evento)}
     >
       {textoBoton}
+      {console.log(nueveDigitos)}
     </a>
   );
 };
