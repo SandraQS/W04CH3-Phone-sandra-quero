@@ -9,12 +9,16 @@ const Key = ({ contenidoBotones, className }) => {
 
   const marcarNumero = (evento) => {
     const botonClick = evento.target.textContent;
-    if (numerosPantalla.length < 9) {
-      setNumerosPantalla([...numerosPantalla, `${botonClick}`]);
-      setNueveDigitos(false);
-    }
-    if (numerosPantalla.length === 9) {
-      setNueveDigitos(true);
+    if (botonClick !== "delete") {
+      if (numerosPantalla.length < 9) {
+        setNumerosPantalla([...numerosPantalla, `${botonClick}`]);
+        setNueveDigitos(false);
+      }
+      if (numerosPantalla.length === 9) {
+        setNueveDigitos(true);
+      }
+    } else {
+      setNumerosPantalla("");
     }
   };
 

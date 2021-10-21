@@ -1,8 +1,8 @@
 - App:
-  .Muestra todos los componentes.
-  .Contiene array vacio valores de los botones. Condicion tope 9.
+  .Muestra todos los componentes. --XXX--
+  .Contiene array vacio valores de los botones. Condicion tope 9. ---XXX---
   .Array objetos que cambia de estado.
-  .Pasa array al display.
+  .Pasa array al display. ---XXX---
   .Funcion tiempo de llamada.
   .Funcion Borrar.
   .Funcion LLamar.
@@ -19,16 +19,16 @@
   .Renderiza cada numero recibido
 
 - Actions:
-  .Muestra un boton recibido segun el estado.
-  .Pasa texto a action.
-  .Pasa una classe al action.
-  .Pasa una funcion a action.
+  .Muestra un boton recibido segun el estado. -X-
+  .Pasa texto a action. -X-
+  .Pasa una classe al action. -X-
+  .Pasa una funcion a action. -X-
 
   - Action: ---
-    .Renderiza texto recibido.
-    .Recibe asigna classes.
-    .Recibe una función.
-    .Recibe estado
+    .Renderiza texto recibido. -X-
+    .Recibe asigna classes. -X-
+    .Recibe una función. -X-
+    .Recibe estado -X-
 
 - Keyboard:
   .Muestra Key. -X-
