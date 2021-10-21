@@ -4,7 +4,7 @@ import Display from "./componentes/Display";
 import Info from "./componentes/Info/Info";
 import TelefonoContext from "./context/TelefonoContext";
 import Prueba from "./componentes/Keyboard/Keyboard";
-// import Actions from "./componentes/Actions/Actions";
+import Actions from "./componentes/Actions/Actions";
 
 function App() {
   const [numerosPantalla, setNumerosPantalla] = useState([]);
@@ -33,7 +33,9 @@ function App() {
         <div className="keyboard-container">
           <Prueba botones={botones} />
         </div>
-        {/* <Actions enLlamada={enLlamada} /> */}
+        <div className="actions">
+          <Actions enLlamada={enLlamada} />
+        </div>
       </TelefonoContext.Provider>
       {/* <!-- El siguiente elemento se oculta añadiéndole la clase "off" --> */}
       {/* <span class="message">Calling...</span>
