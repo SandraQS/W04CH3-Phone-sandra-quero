@@ -1,13 +1,13 @@
-import { useContext } from "react";
-import TelefonoContext from "../../context/TelefonoContext";
-import PropTypes from "prop-types";
+// import { useContext } from "react";
+// import TelefonoContext from "../../context/TelefonoContext";
+// import PropTypes from "prop-types";
 import "./Key.css";
 
-const Key = ({ contenidoBotones }) => {
+const Key = ({ contenidoBotones, className }) => {
   // const { contenidoBotones } = useContext(TelefonoContext);
   return (
     <li>
-      <button className="key">{contenidoBotones}</button>
+      <button className={className}>{contenidoBotones}</button>
     </li>
   );
 };

@@ -10,7 +10,11 @@ const Prueba = () => {
     <>
       <ol className="keyboard">
         {botones.map((boton) => (
-          <Key key={boton.id} contenidoBotones={boton.texto} />
+          <Key
+            key={boton.id}
+            contenidoBotones={boton.texto}
+            className={boton.id === 11 ? "key big" : "key"}
+          />
         ))}
       </ol>
     </>
