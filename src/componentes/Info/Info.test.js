@@ -1,19 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import Info from "./Info";
 
-describe("Given an Display component", () => {
-  describe("When it recibes a string 'Calling...'", () => {
-    test("Then it should show 'Calling...'", () => {
+describe("Dado el componente Info", () => {
+  describe("Cuando le pasamos la clase 'off'", () => {
+    test("Entonces deberia obtener la clase 'off", () => {
       const mensaje = "Calling...";
-      const mensajeEsperado = "Calling...";
+      const claseEsperada = "off";
 
-      render(<Info mensaje={mensaje} />);
-
+      render(<Info className={claseEsperada} />);
+      const mensajeMostrado = screen.getByText(mensaje);
       screen.debug();
 
-      const frase = screen.getByText(mensajeEsperado);
-
-      expect(frase).toBeIntheDocument();
+      expect(mensajeMostrado).toHaveClass(claseEsperada);
     });
   });
 });
