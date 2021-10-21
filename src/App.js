@@ -4,10 +4,11 @@ import Display from "./componentes/Display";
 import Info from "./componentes/Info/Info";
 import TelefonoContext from "./context/TelefonoContext";
 import Prueba from "./componentes/Keyboard/Keyboard";
+import Actions from "./componentes/Actions/Actions";
 
 function App() {
-  const [numerosPantalla /*setNumerosPantalla*/] = useState([]);
-  const [llamada /*setLlamada*/] = useState(false);
+  const [numerosPantalla, setNumerosPantalla] = useState([]);
+  const [enLlamada /*setenLlamada*/] = useState(false);
   const botones = [
     { id: 1, texto: 1, estadoClick: false },
     { id: 2, texto: 2, estadoClick: false },
@@ -24,12 +25,15 @@ function App() {
 
   return (
     <div className="container">
-      <TelefonoContext.Provider value={{ numerosPantalla, llamada, botones }}>
+      <TelefonoContext.Provider
+        value={{ numerosPantalla, setNumerosPantalla, enLlamada, botones }}
+      >
         <Display numerosPantalla={numerosPantalla} />
-        {llamada ? <Info mensajeLlamando={"Calling..."} /> : ""}
+        {enLlamada ? <Info mensajeLlamando={"Calling..."} /> : ""}
         <div className="keyboard-container">
           <Prueba botones={botones} />
         </div>
+        <Actions enLlamada={enLlamada} />
       </TelefonoContext.Provider>
       {/* <!-- El siguiente elemento se oculta añadiéndole la clase "off" --> */}
       {/* <span class="message">Calling...</span>
@@ -77,7 +81,7 @@ function App() {
       {/* <!-- El botón de llamar debe tener la clase "activo" cuando -->
           <!-- el número de teléfono tiene 9 cifras --> */}
       {/* <a href="#" class="call"> */}
-      Call
+      {/* Call */}
       {/* </a> */}
       {/* <!-- Sólo se tiene que ver un botón u otro --> */}
       {/* <a href="#" class="hang active"> */}
