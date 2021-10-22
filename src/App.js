@@ -33,6 +33,7 @@ function App() {
           enLlamada,
           setEnLlamada,
           botones,
+          setBotones,
           nueveDigitos,
           setNueveDigitos,
         }}

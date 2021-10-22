@@ -10,11 +10,12 @@ const Keyboard = () => {
   return (
     <>
       <ol className="keyboard">
-        {botones.map((boton) => (
+        {botones.map((boton, disabled) => (
           <Key
             key={boton.id}
             contenidoBotones={boton.texto}
             className={boton.id === 11 ? "key big" : "key"}
+            disabled={botones[0].estadoClick ? "" : ":disabled"}
           />
         ))}
       </ol>

@@ -3,7 +3,7 @@ import TelefonoContext from "../../context/TelefonoContext";
 // import PropTypes from "prop-types";
 import "./Key.css";
 
-const Key = ({ contenidoBotones, className }) => {
+const Key = ({ contenidoBotones, className, disabled }) => {
   const { numerosPantalla, setNumerosPantalla, setNueveDigitos } =
     useContext(TelefonoContext);
 
@@ -24,7 +24,11 @@ const Key = ({ contenidoBotones, className }) => {
 
   return (
     <li>
-      <button className={className} onClick={(evento) => marcarNumero(evento)}>
+      <button
+        className={className}
+        onClick={(evento) => marcarNumero(evento)}
+        disabled={disabled}
+      >
         {contenidoBotones}
       </button>
     </li>
