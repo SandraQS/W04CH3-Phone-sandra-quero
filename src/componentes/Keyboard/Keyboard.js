@@ -3,7 +3,7 @@ import TelefonoContext from "../../context/TelefonoContext";
 import PropTypes from "prop-types";
 // import "./Keyboard.css";
 import Key from "../Key/Key";
-
+import "./Keyboard.css";
 const Keyboard = () => {
   const { botones } = useContext(TelefonoContext);
 
