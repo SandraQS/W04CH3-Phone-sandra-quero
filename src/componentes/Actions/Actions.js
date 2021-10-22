@@ -8,7 +8,6 @@ const Actions = () => {
     setEnLlamada,
     nueveDigitos,
     setNumerosPantalla,
-    botones,
     setBotones,
   } = useContext(TelefonoContext);
   const llamarColgar = (evento) => {
